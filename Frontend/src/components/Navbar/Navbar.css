@@ -66,7 +66,7 @@
   min-height: 35px;
 }
 
-.navbar-right .search-ic{
+.navbar-right .search-ic {
   position: relative;
   min-width: 35px;
   min-height: 35px;
@@ -93,11 +93,14 @@
   .navbar-right {
     gap: 22px;
   }
-  .navbar-right img {
+  .navbar-right .search-ic {
     width: 22px;
   }
   .navbar-right button {
     padding: 8px 25px;
+  }
+  .navbar button {
+    padding: 0.2rem;
   }
 }
 
@@ -112,12 +115,15 @@
   .navbar-right {
     gap: 20px;
   }
-  .navbar-right img {
+  .navbar-right .search-ic {
     width: 20px;
   }
   .navbar-right button {
     padding: 7px 20px;
     font-size: 15px;
+  }
+  .navabr button{
+    font-size: 1.25rem;
   }
 }
 
