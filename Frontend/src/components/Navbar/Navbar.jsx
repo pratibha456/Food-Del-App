@@ -3,8 +3,16 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
+import { FaSun, FaMoon } from "react-icons/fa";
+import { CiShoppingCart } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 
-const Navbar = ({ setShowLogin }) => {
+
+const Navbar = ({ setShowLogin, isDarkMode, setIsDarkMode }) => {
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   const [menu, setMenu] = useState("Home");
 
   const { getTotalCartAmount } = useContext(StoreContext);
@@ -48,15 +56,20 @@ const Navbar = ({ setShowLogin }) => {
         </a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+        <CiSearch 
+        className="search-ic" />
+
         <div className="navbar-search-icon">
           <Link to="/cart">
-            <img src={assets.basket_icon} alt="" />
+            <CiShoppingCart className="cart-icon" />
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
         <button onClick={() => setShowLogin(true)}>Sign in</button>
       </div>
+      <button onClick={toggleMode} className="toggle-button">
+        {isDarkMode ? <FaSun /> : <FaMoon />}
+      </button>
     </div>
   );
 };
