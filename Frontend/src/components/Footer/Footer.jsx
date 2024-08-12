@@ -10,10 +10,7 @@ const Footer = () => {
           <p className="iconn">FoodY MoodY!!</p>
           {/* <img src={assets.logo} alt="" /> */}
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
-            reprehenderit dolores blanditiis, quidem quam odio magni molestiae
-            sequi esse explicabo error quae vero aliquid harum culpa animi
-            laudantium excepturi porro.
+          Experience the perfect blend of taste and creativity at Foody Moody, where every meal is a mood-lifting delight.
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />

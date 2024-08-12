@@ -5,11 +5,9 @@ import { menu_list } from "../../assets/assets";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className="explore-menu" id="explore-menu">
-      <h1>Explore our menu</h1>
+      <h1>Explore Our Menu</h1>
       <p className="explore-menu-text">
-        Choose from a diverse menu featuring a delectable array of dishes. Our
-        mission is to satisfy your cravings and elevate your dining experience,
-        one delicious meal at a time.
+      Explore our diverse menu at Foody Moody, featuring a tantalizing array of dishes crafted from the freshest ingredients. From comforting classics to innovative creations, each bite promises to delight your senses and satisfy your cravings.
       </p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
