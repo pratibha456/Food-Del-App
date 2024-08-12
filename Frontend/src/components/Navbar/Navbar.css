@@ -14,13 +14,9 @@
   backdrop-filter: blur(10px);
 }
 
-/* .navbar .logo {
-  width: 10px;
-} */
-
-.navbar img{
-  height: 130px;
-  width: 130px;
+.navbar .logo {
+  width: 100px;
+  height: 90px;
 }
 
 .navbar-menu {

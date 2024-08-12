@@ -27,7 +27,7 @@ const Navbar = ({ setShowLogin, isDarkMode, setIsDarkMode }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <img src={assets.logo} alt="" />
+        <img src={assets.logo} alt="" className="logo"/>
       </Link>
       <ul className="navbar-menu">
         <Link
