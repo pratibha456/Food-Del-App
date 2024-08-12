@@ -8,6 +8,8 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 
 
+
+
 const Navbar = ({ setShowLogin, isDarkMode, setIsDarkMode }) => {
   const toggleMode = () => {
     setIsDarkMode(!isDarkMode);

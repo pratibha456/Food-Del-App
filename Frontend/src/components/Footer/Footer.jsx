@@ -7,7 +7,8 @@ const Footer = () => {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="" />
+          <p className="iconn">FoodY MoodY!!</p>
+          {/* <img src={assets.logo} alt="" /> */}
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
             reprehenderit dolores blanditiis, quidem quam odio magni molestiae
@@ -33,13 +34,13 @@ const Footer = () => {
           <h2>GET IN TOUCH</h2>
           <ul>
             <li>+1-212-456-7890</li>
-            <li>contact@tomato.com</li>
+            <li>contact@foodymoody.com</li>
           </ul>
         </div>
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024 © Tomato.com - All Right Reserved.{" "}
+        Copyright 2024 © FoodYMoodY.com - All Right Reserved.{" "}
       </p>
     </div>
   );
