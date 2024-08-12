@@ -8,6 +8,12 @@ const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
   const navigate = useNavigate()
 
+
+   // Calculate total number of items in the cart
+   const getTotalNumberOfItems = () => {
+    return Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
+  };
+
   return (
     <div className="cart">
       <div className="cart-items">
@@ -58,6 +64,11 @@ const Cart = () => {
             <div className="cart-total-details">
               <b>Total</b>
               <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <b>Total Items</b>
+              <b>{getTotalNumberOfItems()}</b>
             </div>
           </div>
           <button onClick={() => navigate('/order')}>PROCEED TO CHECK OUT</button>

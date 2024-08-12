@@ -15,7 +15,12 @@ const Navbar = ({ setShowLogin, isDarkMode, setIsDarkMode }) => {
 
   const [menu, setMenu] = useState("Home");
 
+  const { getTotalNumberOfItems } = useContext(StoreContext);
+
+
   const { getTotalCartAmount } = useContext(StoreContext);
+
+  
 
   return (
     <div className="navbar">
@@ -62,8 +67,10 @@ const Navbar = ({ setShowLogin, isDarkMode, setIsDarkMode }) => {
         <div className="navbar-search-icon">
           <Link to="/cart">
             <CiShoppingCart className="cart-icon" />
+            {getTotalNumberOfItems() > 0 && (
+              <div className="cart-icon-badge">{getTotalNumberOfItems()}</div>
+            )}
           </Link>
-          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
         <button onClick={() => setShowLogin(true)}>Sign in</button>
       </div>
